@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require("dotenv")
-dotenv.config({path:'../inoteClient/.env.local'})
+dotenv.config()
 
 const mongoURI =`${process.env.REACT_APP_URI}`
 
