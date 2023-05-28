@@ -13,7 +13,7 @@ node_modules
 
 # misc
 .DS_Store
-.env
+server.env
 .env.local
 .env.server
 .env.development.local
