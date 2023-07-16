@@ -4,8 +4,8 @@ dotenv.config({path:'../inoteServer/.env.production'})
 
 const mongoURI =`${process.env.REACT_APP_URI}`
 
-const connecttomongo = () => {
-    mongoose.connect(mongoURI,
+const connecttomongo = async() => {
+    await mongoose.connect(mongoURI,
         console.log("Connected"),
         console.log(process.env.REACT_APP_URI),
     )
