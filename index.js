@@ -1,8 +1,12 @@
 const connecttomongo = require('./db');
 const express = require('express')
+
+// const dotenv = require("dotenv")
+// dotenv.config({path:'../inoteServer/.env.production'})
+// const port =process.env.PORT
+
 connecttomongo();
 const app = express()
-const port = 5000
 var cors = require('cors')
 
 
@@ -21,6 +25,6 @@ app.use('/api/notes',require('./routes/notes'))
 
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Example app listening on port ${process.env.PORT}`)
 })
