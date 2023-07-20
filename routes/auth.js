@@ -11,7 +11,7 @@ const fetchuser=require('../middleware/fetchuser')
 
 
 
-const JWT_SECRET = jwt_secret
+const JWT_SECRET = process.env.jwt_secret
 
 //Route 1:create a user with /api/auth/createuser. No login required
 router.post('/createuser', [
