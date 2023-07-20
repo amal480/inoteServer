@@ -1,7 +1,11 @@
 const jwt = require('jsonwebtoken')
 const dotenv = require("dotenv")
 dotenv.config({path:'../inoteServer/.env.production'})
-const JWT_SECRET = "amalmohanam@l"
+
+
+
+
+const JWT_SECRET = process.env.jwt_secret
 
 
 const fetchuser = (req, res, next) => {
