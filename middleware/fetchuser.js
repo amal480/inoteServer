@@ -21,7 +21,6 @@ const fetchuser = (req, res, next) => {
         console.log(req.user.id)
         next();
     } catch (error) {
-        console.log(token+"catch")
         console.log(JWT_SECRET+"catch")
         res.status(401).send({ error: 'Please authenticate usng a valid token2' })
 
